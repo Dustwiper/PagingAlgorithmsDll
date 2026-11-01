@@ -1,0 +1,7 @@
+<map id="IAlgorithm" name="IAlgorithm">
+<area shape="rect" id="Node000001" title="Абстрактный базовый класс, служащий интерфейсом реализации алгоритмов." alt="" coords="22,5,112,33"/>
+<area shape="rect" id="Node000002" href="$classFIFO.html" title="Класс, реализующий модель алгоритма замещения страниц FIFO." alt="" coords="5,81,57,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,46,40,82,35,79,51,48"/>
+<area shape="rect" id="Node000003" href="$classLRU.html" title="Алгоритм LRU." alt="" coords="81,81,128,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,45,100,81,95,80,79,49"/>
+</map>

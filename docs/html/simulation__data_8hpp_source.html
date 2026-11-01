@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Paging Algorithms Imitator: Исходный файл /home/dust_wiper/Documents/C++/PagingAlgorithms/headers/simulation_data.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Paging Algorithms Imitator
+   </div>
+   <div id="projectbrief">Моделирование алгоритмов замещения страниц FIFO и LRU.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('simulation__data_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">simulation_data.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structSimulationData.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structSimulationData.html">SimulationData</a>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structSimulationData.html#a8ce5b5531472efdf809f4774c1a8b60d">   13</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="structSimulationData.html#a8ce5b5531472efdf809f4774c1a8b60d">initialMemoryState</a>; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structSimulationData.html#aeb117b09c71f77056707419664b3ba61">   14</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="structSimulationData.html#aeb117b09c71f77056707419664b3ba61">memoryQueue</a>; </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structSimulationData.html#ab2a57122f0a5c0ef6e629a242ed8aa0f">   15</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structSimulationData.html#ab2a57122f0a5c0ef6e629a242ed8aa0f">memorySlots</a>{0}; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structSimulationResult.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structSimulationResult.html">SimulationResult</a>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structSimulationResult.html#aa233f24835d0bba3151c2991d2bab939">   23</a></span>    std::deque&lt;int&gt; <a class="code hl_variable" href="structSimulationResult.html#aa233f24835d0bba3151c2991d2bab939">memoryState</a>; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structSimulationResult.html#a9eb4e8273e85939f86187f1b9477a0ac">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structSimulationResult.html#a9eb4e8273e85939f86187f1b9477a0ac">incomingPage</a>{}; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structSimulationResult.html#aedb47d8f472653645f9703da2c7b76cb">   25</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structSimulationResult.html#aedb47d8f472653645f9703da2c7b76cb">isPageFault</a>{<span class="keyword">false</span>}; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="ttc" id="astructSimulationData_html"><div class="ttname"><a href="structSimulationData.html">SimulationData</a></div><div class="ttdoc">Структура, содержащая исходные данные для работы алгоритма.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:12</div></div>
+<div class="ttc" id="astructSimulationData_html_a8ce5b5531472efdf809f4774c1a8b60d"><div class="ttname"><a href="structSimulationData.html#a8ce5b5531472efdf809f4774c1a8b60d">SimulationData::initialMemoryState</a></div><div class="ttdeci">std::vector&lt; int &gt; initialMemoryState</div><div class="ttdoc">Массив, описывающий начальное состояние памяти.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:13</div></div>
+<div class="ttc" id="astructSimulationData_html_ab2a57122f0a5c0ef6e629a242ed8aa0f"><div class="ttname"><a href="structSimulationData.html#ab2a57122f0a5c0ef6e629a242ed8aa0f">SimulationData::memorySlots</a></div><div class="ttdeci">size_t memorySlots</div><div class="ttdoc">Количество свободных слотов в памяти.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:15</div></div>
+<div class="ttc" id="astructSimulationData_html_aeb117b09c71f77056707419664b3ba61"><div class="ttname"><a href="structSimulationData.html#aeb117b09c71f77056707419664b3ba61">SimulationData::memoryQueue</a></div><div class="ttdeci">std::vector&lt; int &gt; memoryQueue</div><div class="ttdoc">Очередь запрашиваемых страниц.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:14</div></div>
+<div class="ttc" id="astructSimulationResult_html"><div class="ttname"><a href="structSimulationResult.html">SimulationResult</a></div><div class="ttdoc">Структура, содержащая результат обработки очереди, а так же состояние памяти на одном шаге выполнения...</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:22</div></div>
+<div class="ttc" id="astructSimulationResult_html_a9eb4e8273e85939f86187f1b9477a0ac"><div class="ttname"><a href="structSimulationResult.html#a9eb4e8273e85939f86187f1b9477a0ac">SimulationResult::incomingPage</a></div><div class="ttdeci">int incomingPage</div><div class="ttdoc">Номер следующей на вход страицы.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:24</div></div>
+<div class="ttc" id="astructSimulationResult_html_aa233f24835d0bba3151c2991d2bab939"><div class="ttname"><a href="structSimulationResult.html#aa233f24835d0bba3151c2991d2bab939">SimulationResult::memoryState</a></div><div class="ttdeci">std::deque&lt; int &gt; memoryState</div><div class="ttdoc">Состояние памяти перед обращением.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:23</div></div>
+<div class="ttc" id="astructSimulationResult_html_aedb47d8f472653645f9703da2c7b76cb"><div class="ttname"><a href="structSimulationResult.html#aedb47d8f472653645f9703da2c7b76cb">SimulationResult::isPageFault</a></div><div class="ttdeci">bool isPageFault</div><div class="ttdoc">Признак страничного прерывания.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>headers</b></li><li class="navelem"><b>simulation_data.hpp</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
