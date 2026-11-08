@@ -63,7 +63,7 @@ namespace paging{
          * превышает вместимость памяти.
          * @throws DuplicatesError Если исходном контейнере начальных страниц есть дубликаты
          */
-        virtual void validateData(const SimulationData& iputData) const;
+        void validateData(const SimulationData& iputData) const;
             
     };
 
