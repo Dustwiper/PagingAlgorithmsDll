@@ -1,132 +1,55 @@
-// #include "gtest/gtest.h"
-// #include "FIFO.hpp"
-// #include "utilities.hpp"
+#include <algorithm>
+#include <deque>
+#include <vector>
 
-// /**Command to run tests:
-//  * cmake --build build --target dll_tests && ctest --test-dir build --output-on-failure  
-// */
+#include "gtest/gtest.h"
+#include "FIFO.hpp"
 
-// using namespace paging;
+namespace {
 
-// //** Подготовка к тесту №1*/
-// class FifoTest : public::testing::Test{
-// protected:
-//     FIFO fifo;
-//     // Входные данные 
-//     SimulationData inputData; 
-//     // Результат
-//     std::vector<std::unique_ptr<SimulationResult>> result; 
-//     // Последняя запись в векторе, через которую можно посмотреть конечное состояние памяти
-//     SimulationResult finalResult; 
-//     // Действительное количество прерываний 
-//     int actualPageFaults;
+using paging::FIFO;
+using paging::SimulationData;
+using paging::SimulationResult;
 
-//     void SetUp() override{
-//         // Входная очередь
-//         inputData.memoryQueue = {
-//         3, 5, 2, 7, 1, 4, 2, 6, 3, 1,
-//         5, 7, 3, 2, 4, 1, 6, 2, 3, 5
-//         };
-//         // Количество слотов памяти 
-//         inputData.memorySlots = 5;
-//         // Результат в виде вектора структур
-//         result = fifo.executeAlgorithm(inputData);
-//         // Самая последняя запись в векторе
-//         finalResult = *(result.back().get());
+TEST(FIFOTest, RecordsStateBeforeEachRequestAndEvictsInArrivalOrder) {
+    FIFO fifo;
+    SimulationData input;
+    input.memorySlots = 3;
+    input.memoryQueue = {1, 2, 3, 1, 4};
 
-//         actualPageFaults = countPageFaults(result);
-//     }
+    const std::vector<SimulationResult> history = fifo.runSimulation(input);
 
+    ASSERT_EQ(history.size(), input.memoryQueue.size() + 1);
+    EXPECT_EQ(history[0].memoryState, (std::deque<int>{}));
+    EXPECT_EQ(history[1].memoryState, (std::deque<int>{1}));
+    EXPECT_EQ(history[2].memoryState, (std::deque<int>{1, 2}));
+    EXPECT_EQ(history[3].memoryState, (std::deque<int>{1, 2, 3}));
+    EXPECT_EQ(history[4].memoryState, (std::deque<int>{1, 2, 3}));
+    EXPECT_EQ(history.back().memoryState, (std::deque<int>{4, 2, 3}));
 
-// };
+    EXPECT_TRUE(history[0].isPageFault);
+    EXPECT_TRUE(history[1].isPageFault);
+    EXPECT_TRUE(history[2].isPageFault);
+    EXPECT_FALSE(history[3].isPageFault);
+    EXPECT_TRUE(history[4].isPageFault);
+    EXPECT_EQ(
+        std::count_if(history.begin(), history.end(), [](const SimulationResult& step) {
+            return step.isPageFault;
+        }),
+        4);
+}
 
-// // ТЕСТ №1 - Все блоки памяти изначально пустые 
-// TEST_F(FifoTest, InitialEmplySlots){
+TEST(FIFOTest, EmptyRequestQueuePreservesInitialMemory) {
+    FIFO fifo;
+    SimulationData input;
+    input.initialMemoryState = {7, 8};
+    input.memorySlots = 3;
 
-//     finalResult = *(result.back().get());
+    const std::vector<SimulationResult> history = fifo.runSimulation(input);
 
-//     // Ожидаемое состояние памяти
-//     std::deque<int> expectedFinalMemoryState{5, 4, 1, 6, 3};
+    ASSERT_EQ(history.size(), 1);
+    EXPECT_EQ(history.front().memoryState, (std::deque<int>{7, 8}));
+    EXPECT_FALSE(history.front().isPageFault);
+}
 
-//     // Ожидаемое количество страничных прерываний
-//     int expectedPageFaults{16};
-
-//     // Сравнение состояний памяти
-//     EXPECT_EQ(
-//         expectedFinalMemoryState,
-//         finalResult.memoryState);
-
-//     // Сравнение количества страничных прерываний
-//     EXPECT_EQ(
-//         expectedPageFaults,
-//         actualPageFaults);
-// }
-
-// // Тест №2
-
-
-// //** Подготовка к тесту на аномалию Белади */
-// class BeladiTest : public::testing::Test{
-// protected:
-//     FIFO fifo;
-//     SimulationData inputDataFirst; 
-//     SimulationData inputDataSecond; 
-//     // Действительное количество прерываний 
-//     int actualPageFaultsFirst;
-//     int actualPageFaultsSecond;
-
-//     // Количество блоков памяти при первом и втором прогонеы
-
-//     void SetUp() override{
-//         inputDataFirst.memoryQueue = {5, 4, 3, 2, 5, 4, 1, 5, 4, 3, 2, 1};
-//         inputDataSecond.memoryQueue = {5, 4, 3, 2, 5, 4, 1, 5, 4, 3, 2, 1};
-        
-//         inputDataFirst.memorySlots = 3;
-//         inputDataSecond.memorySlots = 4;
-
-//     }
-// };
-
-// TEST_F(BeladiTest, BeladiAnomalyTest){
-
-//     // Первый запуск с 3 блоками памяти
-//     std::vector<std::unique_ptr<SimulationResult>> threeSlotsRun{
-//         fifo.executeAlgorithm(inputDataFirst)};
-
-//     SimulationResult threeSlotsResult = *(threeSlotsRun.back().get());
-//     int threeSlotsPageFaults = countPageFaults(threeSlotsRun);
-
-//     // Второй запуск с 4 блоками памяти 
-//     std::vector<std::unique_ptr<SimulationResult>> fourSlotsRun{
-//     fifo.executeAlgorithm(inputDataSecond)};
-
-//     SimulationResult fourSlotsResult = *(fourSlotsRun.back().get());
-//     int fourSlotsPageFaults = countPageFaults (fourSlotsRun);
-
-//     std::deque<int> expectedThreeSlotsResult {1, 3, 2};
-//     std::deque<int> expectedFourSlotsResult {2, 1, 4, 3};
-
-//     // Сравнение результатов для запуска с 3 ячейками памяти
-//     EXPECT_EQ(
-//         threeSlotsResult.memoryState,
-//         expectedThreeSlotsResult
-//     );
-
-//     EXPECT_EQ(
-//         threeSlotsPageFaults,
-//         9
-//     );
-    
-//     // Сравнение результатов для запуска с 3 ячейками памяти
-//         EXPECT_EQ(
-//         fourSlotsResult.memoryState,
-//         expectedFourSlotsResult
-//     );
-
-//     EXPECT_EQ(
-//         fourSlotsPageFaults,
-//         10
-//     );
-
-// }
-
+}  // namespace
