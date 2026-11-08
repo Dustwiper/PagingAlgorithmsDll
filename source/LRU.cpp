@@ -14,7 +14,7 @@ namespace paging {
         
         // Хранилище результатов каждой операции.
         std::vector<SimulationResult> historyStorage;
-        historyStorage.reserve(parameters.initialMemoryState.size() + 1);
+        historyStorage.reserve(parameters.memoryQueue.size() + 1);
         
         // Проход по каждому элемету очереди.
         for(int element : parameters.memoryQueue){

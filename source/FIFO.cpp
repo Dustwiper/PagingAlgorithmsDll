@@ -20,7 +20,7 @@ namespace paging {
 
         // Создание вектора результатов
         std::vector<SimulationResult> historyStorage;
-        historyStorage.reserve(parameters.initialMemoryState.size() + 1);
+        historyStorage.reserve(parameters.memoryQueue.size() + 1);
 
         // Итерация по каждому элементу в очереди.
         for(auto page : parameters.memoryQueue){
