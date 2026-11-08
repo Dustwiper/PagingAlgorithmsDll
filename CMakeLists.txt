@@ -110,6 +110,7 @@ configure_file(
 )
 
 # Добавление команды сборки документации
+if(Doxygen_FOUND)
 add_custom_target(
     docs
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
@@ -117,23 +118,25 @@ add_custom_target(
     COMMENT "Generating Doxygen Documentation"
     VERBATIM
 )  
+endif()
 
 ### Google Tests ###
-
-# Запись параметров сторонней библиотеки
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.18.0.zip
-    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-)
-# Скачивание и распаковка библиотеки
-FetchContent_MakeAvailable(googletest)
 
 message(STATUS GoogleTest: )
 
 include(CTest)
 
 if(BUILD_TESTING)
+
+    # Запись параметров сторонней библиотеки
+    FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/tags/v1.18.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    )
+    # Скачивание и распаковка библиотеки
+    FetchContent_MakeAvailable(googletest)
+
     # Создание цели 
     add_executable(dll_tests
         tests/FIFO_tests.cpp
