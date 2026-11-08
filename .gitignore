@@ -4,6 +4,7 @@
 # ==================================
 
 build/
+docs/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
