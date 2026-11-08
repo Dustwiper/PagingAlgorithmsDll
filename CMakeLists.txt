@@ -5,54 +5,66 @@ cmake_minimum_required(VERSION 3.30)
 set(PROJECT_NAME Paging_Algorithm_DLL)
 project(${PROJECT_NAME})
 
-add_executable(${PROJECT_NAME})
-
 # Стандарт языка С++
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Исходные файлы
-target_sources(${PROJECT_NAME}
+# Компановка вычислительной части
+add_library(PagingCore
+    OBJECT
+        source/paging_algorithm.cpp
+        source/FIFO.cpp
+        source/LRU.cpp
+)
+
+# Подключение заголовочных файлов
+target_include_directories(PagingCore
+    PUBLIC
+        ${CMAKE_SOURCE_DIR}/headers
+)
+
+# Дополнительные настройки и флаги компиляции
+target_compile_options(PagingCore
     PRIVATE
+        -Wall
+        -Wextra
+)
+
+# Настройка свойств целей
+set_target_properties(PagingCore
+    PROPERTIES
+        POSITION_INDEPENDENT_CODE ON
+        CXX_VISIBILITY_PRESET hidden
+        VISIBILITY_INLINES_HIDDEN YES
+)
+
+### Динамическая библиотека ###
+
+add_library(Paging_Algorithm_lib SHARED)
+
+# Использование уже прописанных путей от вычисительного модуля для библиотеки
+target_link_libraries(Paging_Algorithm_lib
+    PRIVATE
+        PagingCore
+)
+
+set_target_properties(Paging_Algorithm_lib
+    PROPERTIES
+        CXX_VISIBILITY_PRESET hidden
+        VISIBILITY_INLINES_HIDDEN YES
+)
+
+### Консольное приложение ###
+
+# Создание цели для консольного приложения
+add_executable(Paging_Algorithm_DLL
     source/main.cpp
-    source/FIFO.cpp
-    source/input_output_handler.cpp
-    source/LRU.cpp
+    source/output_handler.cpp
 )
 
-# Заголовочные файлы
-target_include_directories(${PROJECT_NAME}
+target_link_libraries(Paging_Algorithm_DLL
     PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/headers
-)
-
-# Флаги сборки
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
-
-### Настройки dll ###
-
-# Создание новой цели-библиотеки из перечисленных файлов исходного кода
-add_library(Paging_Algorithm_lib SHARED
-    source/FIFO.cpp
-    source/LRU.cpp
-)
-
-# Указание пути к заголовочным файлам.
-target_include_directories(Paging_Algorithm_lib
-    PRIVATE
-    "${CMAKE_CURRENT_SOURCE_DIR}/headers"
-)
-
-# Указание возможностей языка, требуемых для сборки
-target_compile_features(Paging_Algorithm_lib
-    PUBLIC cxx_std_17
-)
-
-# Все символы библиотеки по умолчанию скрыты
-set_target_properties(Paging_Algorithm_lib PROPERTIES
-    CXX_VISIBILITY_PRESET hidden
-    # Дополнительно позволяет скрывать многие inline функции
-    VISIBILITY_INLINES_HIDDEN YES
+        PagingCore
 )
 
 ### Тема документации Doxygen ###
@@ -126,18 +138,16 @@ if(BUILD_TESTING)
     add_executable(dll_tests
         tests/FIFO_tests.cpp
         tests/LRU_tests.cpp
-        source/FIFO.cpp
-        source/LRU.cpp
     )
 
     target_include_directories(dll_tests
         PRIVATE
-            ${CMAKE_CURRENT_SOURCE_DIR}/headers/
-            ${CMAKE_CURRENT_SOURCE_DIR}/tests/
+           "${CMAKE_SOURCE_DIR}/tests"
     )
 
     target_link_libraries(dll_tests
         PRIVATE
+            PagingCore
             GTest::gtest_main)
 
     # Регистрация тестов
