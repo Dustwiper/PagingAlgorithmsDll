@@ -50,7 +50,7 @@ namespace paging {
             }
 
             // Сохранение результата итераций
-            historyStorage.push_back(iterationResult);
+            historyStorage.push_back(std::move(iterationResult));
         }
 
         SimulationResult iterationResult{memory};

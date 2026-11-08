@@ -48,7 +48,7 @@ namespace paging {
                     memory.push_back(page);
                 }
             }
-            historyStorage.push_back(iteraionResult);
+            historyStorage.push_back(std::move(iteraionResult));
         }
         // Запись финального состояния памяти.
         SimulationResult iteraionResult{memory};
