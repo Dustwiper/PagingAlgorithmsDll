@@ -18,7 +18,6 @@ namespace paging{
          * @brief Основная функция выполнения алгоритма.
          * @param[in] parameters Ссылка на структуру исходных данных для алгоритма.
          * @return Возвращает вектор  структур, описывающие каждую итерацию алгоритма. 
-         * @see Context
          * @see SimulationData
          * @see SimulationResult
          */

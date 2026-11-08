@@ -14,7 +14,7 @@
  * элементов в порядке их поступления:
  * первый добавленный элемент обрабатывается первым.
  *
- * @see IAlgorithm
+ * @see PagingAlgorithm
  */
 
 namespace paging{
