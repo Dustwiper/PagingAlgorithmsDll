@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <memory>
-#include "paging_algorithm_interface.hpp"
+#include "paging_algorithm.hpp"
 #include "simulation_data.hpp"
 
 /**
@@ -19,9 +19,9 @@
 
 namespace paging{
 
-    class FIFO : public IAlgorithm{
-    public:
-        std::vector<std::unique_ptr<SimulationResult>> executeAlgorithm(
-                                    SimulationData& parameters) override;
+    class FIFO : public PagingAlgorithm{
+    private:
+        std::vector<SimulationResult> executeAlgorithm(
+                                    const SimulationData& parameters) const override;
     };
 }

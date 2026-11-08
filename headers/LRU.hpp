@@ -1,17 +1,19 @@
 #include <vector>
 #include <memory>
-#include "paging_algorithm_interface.hpp"
+#include "paging_algorithm.hpp"
 #include "simulation_data.hpp"
 
-/**
- * @brief Алгоритм LRU
- */
+
 
 namespace paging{
 
-  class LRU : public IAlgorithm{
-  public:
-    std::vector<std::unique_ptr<SimulationResult>> executeAlgorithm(
-                                SimulationData& parameters) override;
+  /**
+  * @brief Алгоритм LRU
+  */
+
+  class LRU : public PagingAlgorithm{
+  private:
+    std::vector<SimulationResult> executeAlgorithm(
+                                const SimulationData& parameters) const override;
   };
 }
