@@ -69,8 +69,8 @@ target_link_libraries(Paging_Algorithm_DLL
 
 ### Тема документации Doxygen ###
 
-# Нахождение установленного DOXYGEN с требованием строгой обязательности
-find_package(Doxygen REQUIRED)
+# Нахождение установленного DOXYGEN
+find_package(Doxygen)
 
 # Модуль загрузки зависимостей CMake
 cmake_policy(SET CMP0168 NEW)

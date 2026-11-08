@@ -22,9 +22,7 @@ int main(){
 
     OHandler Omanager;
 
-    auto lruResult = fifo.runSimulation(data);
+    auto fifoResult = fifo.runSimulation(data);
 
-    Omanager.showResult(lruResult);
-    // auto fifoResult = contextFifo.runAlgorithm(validData);
-
+    Omanager.showResult(fifoResult);
 }   
