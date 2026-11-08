@@ -1,5 +1,6 @@
+#pragma once 
+
 #include <vector>
-#include <memory>
 #include "paging_algorithm.hpp"
 #include "simulation_data.hpp"
 
