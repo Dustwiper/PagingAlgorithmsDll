@@ -72,6 +72,9 @@ target_link_libraries(Paging_Algorithm_DLL
 # Нахождение установленного DOXYGEN
 find_package(Doxygen)
 
+# Добавление команды сборки документации
+if(Doxygen_FOUND)
+
 # Модуль загрузки зависимостей CMake
 cmake_policy(SET CMP0168 NEW)
 include(FetchContent) 
@@ -109,8 +112,7 @@ configure_file(
     @ONLY
 )
 
-# Добавление команды сборки документации
-if(Doxygen_FOUND)
+
 add_custom_target(
     docs
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
