@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['context_0',['Context',['../classContext.html#a367034b8091d7ad39ec4d543c02dec22',1,'Context']]]
+  ['duplicateserror_0',['DuplicatesError',['../classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124',1,'paging::DuplicatesError']]]
 ];

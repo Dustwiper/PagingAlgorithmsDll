@@ -1,0 +1,24 @@
+<map id="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/paging_algorithm.cpp" name="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/paging_algorithm.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="137,5,358,67"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,115,85,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,70,90,110,87,106,182,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,115,224,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,66,190,105,186,101,219,69"/>
+<area shape="rect" id="Node000004" href="$paging__algorithm_8hpp.html" title=" " alt="" coords="247,115,411,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="275,65,310,103,304,103,274,70"/>
+<area shape="rect" id="Node000009" href="$initialization__error_8hpp.html" title=" " alt="" coords="463,115,630,143"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="348,65,491,109,486,111,347,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,191,263,218"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="313,142,257,184,254,179,308,144"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="284,266,347,294"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="330,141,321,252,316,250,326,144"/>
+<area shape="rect" id="Node000007" href="$simulation__data_8hpp.html" title=" " alt="" coords="338,191,493,218"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="345,141,392,181,386,180,344,146"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="400,218,347,259,344,255,395,220"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="385,266,446,294"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="418,217,418,252,414,249,414,221"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="517,191,576,218"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="548,141,548,177,544,173,545,145"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="600,191,685,218"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="564,141,616,181,611,181,563,146"/>
+</map>

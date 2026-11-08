@@ -1,0 +1,11 @@
+<map id="paging::InitializationError" name="paging::InitializationError">
+<area shape="rect" id="Node000001" title="Класс, представляющий ошибки инициализации исходных данных" alt="" coords="221,81,406,109"/>
+<area shape="rect" id="Node000003" href="$classpaging_1_1DuplicatesError.html" title="Ошибка дубликатов данных." alt="" coords="5,157,179,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,116,132,159,131,154,257,112"/>
+<area shape="rect" id="Node000004" href="$classpaging_1_1ExceededMemoryError.html" title="Ошибка возможного выхода за пределы выделенной памяти." alt="" coords="203,157,424,184"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,123,315,158,311,155,311,126"/>
+<area shape="rect" id="Node000005" href="$classpaging_1_1ZeroMemorySlotsError.html" title="Ошибка неопределённого поведения(undefind behavior)." alt="" coords="448,157,669,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="372,111,517,156,512,156,371,116"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="257,5,370,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,47,316,82,311,79,312,51"/>
+</map>

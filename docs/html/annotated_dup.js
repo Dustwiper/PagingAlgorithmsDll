@@ -1,13 +1,15 @@
 var annotated_dup =
 [
-    [ "Context", "classContext.html", "classContext" ],
-    [ "ExceededMemoryError", "classExceededMemoryError.html", null ],
-    [ "FIFO", "classFIFO.html", "classFIFO" ],
-    [ "IAlgorithm", "classIAlgorithm.html", "classIAlgorithm" ],
-    [ "InitializationError", "classInitializationError.html", null ],
-    [ "IOHandler", "classIOHandler.html", "classIOHandler" ],
-    [ "LRU", "classLRU.html", "classLRU" ],
-    [ "SimulationData", "structSimulationData.html", "structSimulationData" ],
-    [ "SimulationResult", "structSimulationResult.html", "structSimulationResult" ],
-    [ "ZeroMemorySlotsError", "classZeroMemorySlotsError.html", null ]
+    [ "paging", "namespacepaging.html", [
+      [ "FIFO", "classpaging_1_1FIFO.html", "classpaging_1_1FIFO" ],
+      [ "InitializationError", "classpaging_1_1InitializationError.html", "classpaging_1_1InitializationError" ],
+      [ "ExceededMemoryError", "classpaging_1_1ExceededMemoryError.html", "classpaging_1_1ExceededMemoryError" ],
+      [ "ZeroMemorySlotsError", "classpaging_1_1ZeroMemorySlotsError.html", "classpaging_1_1ZeroMemorySlotsError" ],
+      [ "DuplicatesError", "classpaging_1_1DuplicatesError.html", "classpaging_1_1DuplicatesError" ],
+      [ "LRU", "classpaging_1_1LRU.html", "classpaging_1_1LRU" ],
+      [ "PagingAlgorithm", "classpaging_1_1PagingAlgorithm.html", "classpaging_1_1PagingAlgorithm" ],
+      [ "SimulationData", "structpaging_1_1SimulationData.html", "structpaging_1_1SimulationData" ],
+      [ "SimulationResult", "structpaging_1_1SimulationResult.html", "structpaging_1_1SimulationResult" ]
+    ] ],
+    [ "OHandler", "classOHandler.html", "classOHandler" ]
 ];

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Paging Algorithms Imitator: Файл /home/dust_wiper/Documents/C++/PagingAlgorithms/source/FIFO.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Paging Algorithms Imitator
+   </div>
+   <div id="projectbrief">Моделирование алгоритмов замещения страниц FIFO и LRU.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('FIFO_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл FIFO.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="FIFO_8hpp_source.html">FIFO.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="simulation__data_8hpp_source.html">simulation_data.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для FIFO.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="FIFO_8cpp__incl.png" border="0" usemap="#a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2FIFO_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2FIFO_8cpp" id="a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2FIFO_8cpp">
+<area shape="rect" title=" " alt="" coords="72,5,293,67"/>
+<area shape="rect" title=" " alt="" coords="5,115,90,143"/>
+<area shape="poly" title=" " alt="" coords="136,70,81,108,77,104,139,65"/>
+<area shape="rect" title=" " alt="" coords="161,342,222,370"/>
+<area shape="poly" title=" " alt="" coords="172,65,161,113,150,169,146,232,149,263,155,293,174,330,168,329,150,295,144,264,141,232,145,169,156,111,170,70"/>
+<area shape="rect" title=" " alt="" coords="508,191,587,218"/>
+<area shape="poly" title=" " alt="" coords="282,65,344,87,405,113,466,146,519,181,514,181,463,151,402,117,342,92,283,70"/>
+<area shape="rect" href="FIFO_8hpp.html" title=" " alt="" coords="312,115,391,143"/>
+<area shape="poly" title=" " alt="" coords="239,65,316,106,311,108,239,70"/>
+<area shape="rect" href="simulation__data_8hpp.html" title=" " alt="" coords="165,266,319,294"/>
+<area shape="poly" title=" " alt="" coords="192,66,238,251,233,251,188,69"/>
+<area shape="poly" title=" " alt="" coords="387,141,501,184,496,186,386,146"/>
+<area shape="rect" title=" " alt="" coords="413,266,490,294"/>
+<area shape="poly" title=" " alt="" coords="386,140,420,160,435,173,447,189,457,220,458,252,453,249,452,221,442,192,431,177,417,164,386,146"/>
+<area shape="rect" href="paging__algorithm_8hpp.html" title=" " alt="" coords="270,191,433,218"/>
+<area shape="poly" title=" " alt="" coords="353,141,354,176,349,174,350,145"/>
+<area shape="poly" title=" " alt="" coords="317,145,288,165,260,192,248,221,244,252,239,249,243,220,256,189,285,160,321,142"/>
+<area shape="poly" title=" " alt="" coords="370,216,424,257,419,257,369,221"/>
+<area shape="rect" title=" " alt="" coords="260,342,323,370"/>
+<area shape="poly" title=" " alt="" coords="352,217,347,254,334,295,313,331,310,327,329,293,341,253,348,221"/>
+<area shape="poly" title=" " alt="" coords="334,218,276,260,273,255,330,220"/>
+<area shape="poly" title=" " alt="" coords="235,293,211,331,208,327,231,296"/>
+<area shape="poly" title=" " alt="" coords="252,292,277,330,272,328,250,297"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:paging" id="r_paging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepaging.html">paging</a></td></tr>
+<tr class="memdesc:namespacepaging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, реализующий модель алгоритма замещения страниц <a class="el" href="classpaging_1_1FIFO.html">FIFO</a>. <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="FIFO_8cpp.html">FIFO.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

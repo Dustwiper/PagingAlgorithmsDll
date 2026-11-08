@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['context_0',['Context',['../classContext.html',1,'']]]
+  ['duplicateserror_0',['DuplicatesError',['../classpaging_1_1DuplicatesError.html',1,'paging']]]
 ];

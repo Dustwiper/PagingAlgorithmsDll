@@ -93,51 +93,81 @@ $(function(){initNavTree('initialization__error_8hpp_source.html','',''); });
   <div class="headertitle"><div class="title">initialization_error.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<a href="initialization__error_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classInitializationError.html">   11</a></span><span class="keyword">class </span>InitializationError : <span class="keyword">public</span> std::exception{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    InitializationError(<span class="keyword">const</span> std::string&amp; message) : m_message(message)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keyword">noexcept</span> <span class="keyword">override</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">return</span> m_message.c_str();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string m_message;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepaging.html">paging</a>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classpaging_1_1InitializationError.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a> : <span class="keyword">public</span> std::exception{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">   15</a></span>        <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>(<span class="keyword">const</span> std::string&amp; message) : <a class="code hl_variable" href="classpaging_1_1InitializationError.html#ad28b320e69724479cebb32c9cae53b93">m_message</a>(message)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {}</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classExceededMemoryError.html">   30</a></span><span class="keyword">class </span>ExceededMemoryError : <span class="keyword">public</span> InitializationError{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ExceededMemoryError(<span class="keyword">const</span> std::string&amp; initErrMessage) : </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        InitializationError(initErrMessage) {}</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classpaging_1_1InitializationError.html#a5dddce68bfee1397745c85125e166da2">   18</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classpaging_1_1InitializationError.html#a5dddce68bfee1397745c85125e166da2">what</a>() const noexcept<span class="keyword"> override</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classpaging_1_1InitializationError.html#ad28b320e69724479cebb32c9cae53b93">m_message</a>.c_str();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classpaging_1_1InitializationError.html#ad28b320e69724479cebb32c9cae53b93">   23</a></span>        std::string <a class="code hl_variable" href="classpaging_1_1InitializationError.html#ad28b320e69724479cebb32c9cae53b93">m_message</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classpaging_1_1ExceededMemoryError.html">   31</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classpaging_1_1ExceededMemoryError.html#ab140000738db708ce56fe949b805dc76">ExceededMemoryError</a> : <span class="keyword">public</span> <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classpaging_1_1ExceededMemoryError.html#ab140000738db708ce56fe949b805dc76">   33</a></span>        <a class="code hl_function" href="classpaging_1_1ExceededMemoryError.html#ab140000738db708ce56fe949b805dc76">ExceededMemoryError</a>(<span class="keyword">const</span> std::string&amp; initErrMessage) : </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                            <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>(initErrMessage) {}</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
+</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classZeroMemorySlotsError.html">   42</a></span><span class="keyword">class </span>ZeroMemorySlotsError : <span class="keyword">public</span> InitializationError{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    ZeroMemorySlotsError(<span class="keyword">const</span> std::string&amp; memorySlotsError) :</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                         InitializationError(memorySlotsError)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classpaging_1_1ZeroMemorySlotsError.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classpaging_1_1ZeroMemorySlotsError.html#aa0d454e9b229303f71df6bb41de2f2bf">ZeroMemorySlotsError</a> : <span class="keyword">public</span> <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classpaging_1_1ZeroMemorySlotsError.html#aa0d454e9b229303f71df6bb41de2f2bf">   45</a></span>        <a class="code hl_function" href="classpaging_1_1ZeroMemorySlotsError.html#aa0d454e9b229303f71df6bb41de2f2bf">ZeroMemorySlotsError</a>(<span class="keyword">const</span> std::string&amp; memorySlotsError) :</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                            <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>(memorySlotsError)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {}</div>
 </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classpaging_1_1DuplicatesError.html">   55</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">DuplicatesError</a> : <span class="keyword">public</span> <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">   57</a></span>        <a class="code hl_function" href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">DuplicatesError</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">DuplicatesError</a>) :</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        <a class="code hl_function" href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">InitializationError</a>(<a class="code hl_function" href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">DuplicatesError</a>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {}</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="ttc" id="aclasspaging_1_1DuplicatesError_html_ad817665ed169998dc72d9e3235a99124"><div class="ttname"><a href="classpaging_1_1DuplicatesError.html#ad817665ed169998dc72d9e3235a99124">paging::DuplicatesError::DuplicatesError</a></div><div class="ttdeci">DuplicatesError(const std::string &amp;DuplicatesError)</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:57</div></div>
+<div class="ttc" id="aclasspaging_1_1ExceededMemoryError_html_ab140000738db708ce56fe949b805dc76"><div class="ttname"><a href="classpaging_1_1ExceededMemoryError.html#ab140000738db708ce56fe949b805dc76">paging::ExceededMemoryError::ExceededMemoryError</a></div><div class="ttdeci">ExceededMemoryError(const std::string &amp;initErrMessage)</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:33</div></div>
+<div class="ttc" id="aclasspaging_1_1InitializationError_html_a21a5e8db5bb39c5a26c861497e9f7425"><div class="ttname"><a href="classpaging_1_1InitializationError.html#a21a5e8db5bb39c5a26c861497e9f7425">paging::InitializationError::InitializationError</a></div><div class="ttdeci">InitializationError(const std::string &amp;message)</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:15</div></div>
+<div class="ttc" id="aclasspaging_1_1InitializationError_html_a5dddce68bfee1397745c85125e166da2"><div class="ttname"><a href="classpaging_1_1InitializationError.html#a5dddce68bfee1397745c85125e166da2">paging::InitializationError::what</a></div><div class="ttdeci">virtual const char * what() const noexcept override</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:18</div></div>
+<div class="ttc" id="aclasspaging_1_1InitializationError_html_ad28b320e69724479cebb32c9cae53b93"><div class="ttname"><a href="classpaging_1_1InitializationError.html#ad28b320e69724479cebb32c9cae53b93">paging::InitializationError::m_message</a></div><div class="ttdeci">std::string m_message</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:23</div></div>
+<div class="ttc" id="aclasspaging_1_1ZeroMemorySlotsError_html_aa0d454e9b229303f71df6bb41de2f2bf"><div class="ttname"><a href="classpaging_1_1ZeroMemorySlotsError.html#aa0d454e9b229303f71df6bb41de2f2bf">paging::ZeroMemorySlotsError::ZeroMemorySlotsError</a></div><div class="ttdeci">ZeroMemorySlotsError(const std::string &amp;memorySlotsError)</div><div class="ttdef"><b>Определения</b> initialization_error.hpp:45</div></div>
+<div class="ttc" id="anamespacepaging_html"><div class="ttname"><a href="namespacepaging.html">paging</a></div><div class="ttdoc">Класс, реализующий модель алгоритма замещения страниц FIFO.</div><div class="ttdef"><b>Определения</b> FIFO.hpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>headers</b></li><li class="navelem"><b>initialization_error.hpp</b></li>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="initialization__error_8hpp.html">initialization_error.hpp</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "Paging Algorithms Imitator", "index.html", [
+    [ "Пространства имен", "namespaces.html", [
+      [ "Пространства имен", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],
@@ -36,14 +39,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Файлы", "files.html", [
-      [ "Файлы", "files.html", "files_dup" ]
+      [ "Файлы", "files.html", "files_dup" ],
+      [ "Список членов всех файлов", "globals.html", [
+        [ "Указатель", "globals.html", null ],
+        [ "Функции", "globals_func.html", null ],
+        [ "Макросы", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"FIFO_8hpp_source.html"
+"API_8hpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

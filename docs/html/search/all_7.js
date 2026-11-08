@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['setinputdata_0',['setInputData',['../classIOHandler.html#a3224aac27ae29ef03dcd8707bee6b5f0',1,'IOHandler']]],
-  ['showresult_1',['showResult',['../classIOHandler.html#a005771b47a7ac8a43b35beb0ff71c139',1,'IOHandler']]],
-  ['simulationdata_2',['SimulationData',['../structSimulationData.html',1,'']]],
-  ['simulationresult_3',['SimulationResult',['../structSimulationResult.html',1,'']]]
+  ['ohandler_0',['OHandler',['../classOHandler.html',1,'OHandler'],['../classOHandler.html#a74132e2be8b39f0de135897f052bbf35',1,'OHandler::OHandler()']]],
+  ['output_5fhandler_2ecpp_1',['output_handler.cpp',['../output__handler_8cpp.html',1,'']]],
+  ['output_5fhandler_2ehpp_2',['output_handler.hpp',['../output__handler_8hpp.html',1,'']]]
 ];

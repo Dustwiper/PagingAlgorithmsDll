@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['incomingpage_0',['incomingPage',['../structSimulationResult.html#a9eb4e8273e85939f86187f1b9477a0ac',1,'SimulationResult']]],
-  ['initialmemorystate_1',['initialMemoryState',['../structSimulationData.html#a8ce5b5531472efdf809f4774c1a8b60d',1,'SimulationData']]],
-  ['ispagefault_2',['isPageFault',['../structSimulationResult.html#aedb47d8f472653645f9703da2c7b76cb',1,'SimulationResult']]]
+  ['incomingpage_0',['incomingPage',['../structpaging_1_1SimulationResult.html#ab52b720df15900e13c7d82f2f90c66a9',1,'paging::SimulationResult']]],
+  ['initialmemorystate_1',['initialMemoryState',['../structpaging_1_1SimulationData.html#a0a20703ddbbb8a7d9c970d7bda06e08b',1,'paging::SimulationData']]],
+  ['ispagefault_2',['isPageFault',['../structpaging_1_1SimulationResult.html#afeb97d000c76b7835cde68ccaf4b15b5',1,'paging::SimulationResult']]]
 ];

@@ -1,0 +1,5 @@
+<map id="paging::FIFO" name="paging::FIFO">
+<area shape="rect" id="Node000001" title=" " alt="" coords="44,81,147,109"/>
+<area shape="rect" id="Node000002" href="$classpaging_1_1PagingAlgorithm.html" title="Абстрактный базовый класс, служащий интерфейсом реализации алгоритмов." alt="" coords="5,5,186,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,47,98,82,93,80,94,51"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/FIFO.cpp" name="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/FIFO.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,5,293,67"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,115,90,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,70,81,108,77,104,139,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="161,342,222,370"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,65,161,113,150,169,146,232,149,263,155,293,174,330,168,329,150,295,144,264,141,232,145,169,156,111,170,70"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="508,191,587,218"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="282,65,344,87,405,113,466,146,519,181,514,181,463,151,402,117,342,92,283,70"/>
+<area shape="rect" id="Node000005" href="$FIFO_8hpp.html" title=" " alt="" coords="312,115,391,143"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="239,65,316,106,311,108,239,70"/>
+<area shape="rect" id="Node000009" href="$simulation__data_8hpp.html" title=" " alt="" coords="165,266,319,294"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="192,66,238,251,233,251,188,69"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="387,141,501,184,496,186,386,146"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="413,266,490,294"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="386,140,420,160,435,173,447,189,457,220,458,252,453,249,452,221,442,192,431,177,417,164,386,146"/>
+<area shape="rect" id="Node000007" href="$paging__algorithm_8hpp.html" title=" " alt="" coords="270,191,433,218"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="353,141,354,176,349,174,350,145"/>
+<area shape="poly" id="edge13_Node000005_Node000009" title=" " alt="" coords="317,145,288,165,260,192,248,221,244,252,239,249,243,220,256,189,285,160,321,142"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="370,216,424,257,419,257,369,221"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="260,342,323,370"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="352,217,347,254,334,295,313,331,310,327,329,293,341,253,348,221"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="334,218,276,260,273,255,330,220"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="235,293,211,331,208,327,231,296"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="252,292,277,330,272,328,250,297"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="/home/dust_wiper/Documents/C++/PagingAlgorithms/headers/LRU.hpp" name="/home/dust_wiper/Documents/C++/PagingAlgorithms/headers/LRU.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,236,67"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="144,266,206,294"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,70,68,101,46,139,39,159,37,179,39,198,47,217,63,236,84,250,131,270,126,271,81,255,60,240,42,220,34,200,31,179,34,158,41,137,63,98,92,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="57,191,133,218"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,65,90,116,88,146,91,176,86,175,82,146,85,114,103,70"/>
+<area shape="rect" id="Node000004" href="$paging__algorithm_8hpp.html" title=" " alt="" coords="99,115,262,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,65,166,101,161,102,140,70"/>
+<area shape="rect" id="Node000005" href="$simulation__data_8hpp.html" title=" " alt="" coords="213,191,367,218"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="214,65,248,86,276,113,290,144,293,176,289,174,284,145,272,117,245,90,214,70"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="182,141,179,251,174,250,178,144"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="163,145,124,182,120,178,167,141"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="201,141,260,181,255,182,200,146"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="272,218,209,260,207,255,267,220"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="259,266,320,294"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="292,217,292,252,288,249,288,221"/>
+</map>

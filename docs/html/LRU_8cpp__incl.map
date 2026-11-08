@@ -1,0 +1,22 @@
+<map id="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/LRU.cpp" name="/home/dust_wiper/Documents/C++/PagingAlgorithms/source/LRU.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="84,5,305,67"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="9,342,71,370"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,70,122,105,79,152,40,207,11,267,8,283,10,298,23,328,18,329,5,300,3,282,5,266,35,204,75,149,118,102,160,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="257,115,341,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,65,275,104,270,105,229,70"/>
+<area shape="rect" id="Node000004" href="$LRU_8hpp.html" title=" " alt="" coords="157,115,232,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,65,197,100,192,98,194,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="181,342,243,370"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="233,139,275,159,295,172,313,189,326,208,334,225,341,266,345,281,341,295,324,315,304,329,259,348,257,343,301,325,321,311,336,293,339,281,336,267,329,226,322,210,309,192,292,177,272,163,233,145"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="250,266,326,294"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="231,141,264,160,279,173,290,190,299,221,297,252,292,250,293,221,286,192,275,177,261,164,231,146"/>
+<area shape="rect" id="Node000007" href="$paging__algorithm_8hpp.html" title=" " alt="" coords="113,191,276,218"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="196,141,197,176,192,174,194,146"/>
+<area shape="rect" id="Node000008" href="$simulation__data_8hpp.html" title=" " alt="" coords="20,266,175,294"/>
+<area shape="poly" id="edge12_Node000004_Node000008" title=" " alt="" coords="158,145,129,164,115,177,104,192,95,221,95,252,90,250,90,220,99,189,111,173,126,160,161,141"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="198,217,211,327,206,326,194,220"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="212,216,262,256,257,257,211,221"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="175,221,128,259,125,255,179,217"/>
+<area shape="poly" id="edge11_Node000008_Node000002" title=" " alt="" coords="89,293,61,332,57,328,85,296"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="119,292,181,333,176,334,117,297"/>
+</map>

@@ -4,8 +4,8 @@
 #include "LRU.hpp"
 
 namespace paging {
-    std::vector<std::unique_ptr<SimulationResult>> LRU::executeAlgorithm(
-        SimulationData &parameters){
+    std::vector<SimulationResult> LRU::executeAlgorithm(
+        const SimulationData &parameters) const {
         
         // Создание модели памяти как двухсторонней очереди.
         std::deque<int> memory;
@@ -13,25 +13,23 @@ namespace paging {
         memory.assign(parameters.initialMemoryState.begin(), parameters.initialMemoryState.end());
         
         // Хранилище результатов каждой операции.
-        std::vector<std::unique_ptr<SimulationResult>> historyStorage;
+        std::vector<SimulationResult> historyStorage;
+        historyStorage.reserve(parameters.initialMemoryState.size() + 1);
         
         // Проход по каждому элемету очереди.
         for(int element : parameters.memoryQueue){
 
             // Создание структуры, для сохранения информации о каждой итерации.
-            std::unique_ptr<SimulationResult> iteraionResult = std::make_unique<SimulationResult>();
-            
-            // Запись исходного состояния памятию
-            iteraionResult->memoryState = memory;
+            SimulationResult iterationResult{memory};
             // Запись следующего входящей страницы.
-            iteraionResult->incomingPage = element;
+            iterationResult.incomingPage = element;
 
             auto elementItr = std::find(memory.begin(), memory.end(), element);
 
             /* Если страницы в памяти не оказалось */
             if(elementItr == memory.end()){
                 // Запись маркера о страничном прерывании.
-                iteraionResult->isPageFault = true;
+                iterationResult.isPageFault = true;
 
                 // Если пустых слотов не оказалось.
                 if(memory.size() == parameters.memorySlots){
@@ -52,12 +50,11 @@ namespace paging {
             }
 
             // Сохранение результата итераций
-            historyStorage.push_back(std::move(iteraionResult));
+            historyStorage.push_back(iterationResult);
         }
 
-        std::unique_ptr<SimulationResult> iteraionResult = std::make_unique<SimulationResult>();
-        iteraionResult->memoryState = memory;
-        historyStorage.push_back(std::move(iteraionResult));
+        SimulationResult iterationResult{memory};
+        historyStorage.push_back(iterationResult);
 
         return historyStorage;
     }

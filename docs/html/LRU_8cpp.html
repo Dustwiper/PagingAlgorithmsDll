@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Paging Algorithms Imitator: Файл /home/dust_wiper/Documents/C++/PagingAlgorithms/source/LRU.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Paging Algorithms Imitator
+   </div>
+   <div id="projectbrief">Моделирование алгоритмов замещения страниц FIFO и LRU.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('LRU_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл LRU.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="LRU_8hpp_source.html">LRU.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для LRU.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="LRU_8cpp__incl.png" border="0" usemap="#a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2LRU_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2LRU_8cpp" id="a_2home_2dust__wiper_2Documents_2C_09_09_2PagingAlgorithms_2source_2LRU_8cpp">
+<area shape="rect" title=" " alt="" coords="84,5,305,67"/>
+<area shape="rect" title=" " alt="" coords="9,342,71,370"/>
+<area shape="poly" title=" " alt="" coords="157,70,122,105,79,152,40,207,11,267,8,283,10,298,23,328,18,329,5,300,3,282,5,266,35,204,75,149,118,102,160,65"/>
+<area shape="rect" title=" " alt="" coords="257,115,341,143"/>
+<area shape="poly" title=" " alt="" coords="229,65,275,104,270,105,229,70"/>
+<area shape="rect" href="LRU_8hpp.html" title=" " alt="" coords="157,115,232,143"/>
+<area shape="poly" title=" " alt="" coords="196,65,197,100,192,98,194,70"/>
+<area shape="rect" title=" " alt="" coords="181,342,243,370"/>
+<area shape="poly" title=" " alt="" coords="233,139,275,159,295,172,313,189,326,208,334,225,341,266,345,281,341,295,324,315,304,329,259,348,257,343,301,325,321,311,336,293,339,281,336,267,329,226,322,210,309,192,292,177,272,163,233,145"/>
+<area shape="rect" title=" " alt="" coords="250,266,326,294"/>
+<area shape="poly" title=" " alt="" coords="231,141,264,160,279,173,290,190,299,221,297,252,292,250,293,221,286,192,275,177,261,164,231,146"/>
+<area shape="rect" href="paging__algorithm_8hpp.html" title=" " alt="" coords="113,191,276,218"/>
+<area shape="poly" title=" " alt="" coords="196,141,197,176,192,174,194,146"/>
+<area shape="rect" href="simulation__data_8hpp.html" title=" " alt="" coords="20,266,175,294"/>
+<area shape="poly" title=" " alt="" coords="158,145,129,164,115,177,104,192,95,221,95,252,90,250,90,220,99,189,111,173,126,160,161,141"/>
+<area shape="poly" title=" " alt="" coords="198,217,211,327,206,326,194,220"/>
+<area shape="poly" title=" " alt="" coords="212,216,262,256,257,257,211,221"/>
+<area shape="poly" title=" " alt="" coords="175,221,128,259,125,255,179,217"/>
+<area shape="poly" title=" " alt="" coords="89,293,61,332,57,328,85,296"/>
+<area shape="poly" title=" " alt="" coords="119,292,181,333,176,334,117,297"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:paging" id="r_paging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepaging.html">paging</a></td></tr>
+<tr class="memdesc:namespacepaging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, реализующий модель алгоритма замещения страниц <a class="el" href="classpaging_1_1FIFO.html">FIFO</a>. <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="LRU_8cpp.html">LRU.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

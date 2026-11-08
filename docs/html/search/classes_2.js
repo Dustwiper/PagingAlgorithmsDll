@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fifo_0',['FIFO',['../classFIFO.html',1,'']]]
+  ['fifo_0',['FIFO',['../classpaging_1_1FIFO.html',1,'paging']]]
 ];

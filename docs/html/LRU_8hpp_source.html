@@ -93,30 +93,38 @@ $(function(){initNavTree('LRU_8hpp_source.html','',''); });
   <div class="headertitle"><div class="title">LRU.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<a href="LRU_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;paging_algorithm_interface.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;simulation_data.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classLRU.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classLRU.html">LRU</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIAlgorithm.html">IAlgorithm</a>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  std::vector&lt;std::unique_ptr&lt;SimulationResult&gt;&gt; <a class="code hl_function" href="classLRU.html#a5ba1abacba937e555aec320ac4df2ea8">executeAlgorithm</a>(</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                                <a class="code hl_struct" href="structSimulationData.html">SimulationData</a>&amp; parameters) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="paging__algorithm_8hpp.html">paging_algorithm.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="simulation__data_8hpp.html">simulation_data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepaging.html">paging</a>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classpaging_1_1LRU.html">   14</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classpaging_1_1LRU.html">LRU</a> : <span class="keyword">public</span> <a class="code hl_class" href="classpaging_1_1PagingAlgorithm.html">PagingAlgorithm</a>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::vector&lt;SimulationResult&gt; <a class="code hl_function" href="classpaging_1_1LRU.html#a95b3c8e64d87934843852ee310f0e490">executeAlgorithm</a>(</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                <span class="keyword">const</span> <a class="code hl_struct" href="structpaging_1_1SimulationData.html">SimulationData</a>&amp; parameters) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  };</div>
 </div>
-<div class="ttc" id="aclassIAlgorithm_html"><div class="ttname"><a href="classIAlgorithm.html">IAlgorithm</a></div><div class="ttdoc">Абстрактный базовый класс, служащий интерфейсом реализации алгоритмов.</div><div class="ttdef"><b>Определения</b> paging_algorithm_interface.hpp:9</div></div>
-<div class="ttc" id="aclassLRU_html"><div class="ttname"><a href="classLRU.html">LRU</a></div><div class="ttdoc">Алгоритм LRU.</div><div class="ttdef"><b>Определения</b> LRU.hpp:10</div></div>
-<div class="ttc" id="aclassLRU_html_a5ba1abacba937e555aec320ac4df2ea8"><div class="ttname"><a href="classLRU.html#a5ba1abacba937e555aec320ac4df2ea8">LRU::executeAlgorithm</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; SimulationResult &gt; &gt; executeAlgorithm(SimulationData &amp;parameters) override</div><div class="ttdoc">Основная функция выполнения алгоритма.</div><div class="ttdef"><b>Определения</b> LRU.cpp:6</div></div>
-<div class="ttc" id="astructSimulationData_html"><div class="ttname"><a href="structSimulationData.html">SimulationData</a></div><div class="ttdoc">Структура, содержащая исходные данные для работы алгоритма.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:12</div></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aclasspaging_1_1LRU_html"><div class="ttname"><a href="classpaging_1_1LRU.html">paging::LRU</a></div><div class="ttdoc">Алгоритм LRU.</div><div class="ttdef"><b>Определения</b> LRU.hpp:14</div></div>
+<div class="ttc" id="aclasspaging_1_1LRU_html_a95b3c8e64d87934843852ee310f0e490"><div class="ttname"><a href="classpaging_1_1LRU.html#a95b3c8e64d87934843852ee310f0e490">paging::LRU::executeAlgorithm</a></div><div class="ttdeci">std::vector&lt; SimulationResult &gt; executeAlgorithm(const SimulationData &amp;parameters) const override</div><div class="ttdoc">Выполняет моделирование алгоритма замещения страниц.</div><div class="ttdef"><b>Определения</b> LRU.cpp:7</div></div>
+<div class="ttc" id="aclasspaging_1_1PagingAlgorithm_html"><div class="ttname"><a href="classpaging_1_1PagingAlgorithm.html">paging::PagingAlgorithm</a></div><div class="ttdoc">Абстрактный базовый класс, служащий интерфейсом реализации алгоритмов.</div><div class="ttdef"><b>Определения</b> paging_algorithm.hpp:15</div></div>
+<div class="ttc" id="anamespacepaging_html"><div class="ttname"><a href="namespacepaging.html">paging</a></div><div class="ttdoc">Класс, реализующий модель алгоритма замещения страниц FIFO.</div><div class="ttdef"><b>Определения</b> FIFO.hpp:20</div></div>
+<div class="ttc" id="apaging__algorithm_8hpp_html"><div class="ttname"><a href="paging__algorithm_8hpp.html">paging_algorithm.hpp</a></div></div>
+<div class="ttc" id="asimulation__data_8hpp_html"><div class="ttname"><a href="simulation__data_8hpp.html">simulation_data.hpp</a></div></div>
+<div class="ttc" id="astructpaging_1_1SimulationData_html"><div class="ttname"><a href="structpaging_1_1SimulationData.html">paging::SimulationData</a></div><div class="ttdoc">Структура, содержащая исходные данные для работы алгоритма.</div><div class="ttdef"><b>Определения</b> simulation_data.hpp:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>headers</b></li><li class="navelem"><b>LRU.hpp</b></li>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="LRU_8hpp.html">LRU.hpp</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
