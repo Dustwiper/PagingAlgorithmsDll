@@ -18,7 +18,6 @@ int main(){
     };
 
     paging::FIFO fifo;
-    fifo.runSimulation(data);
 
     OHandler Omanager;
 
