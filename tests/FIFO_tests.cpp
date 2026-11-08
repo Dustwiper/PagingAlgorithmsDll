@@ -5,6 +5,13 @@
 #include "gtest/gtest.h"
 #include "FIFO.hpp"
 
+/** Build tests
+ * cmake --build build --target dll_tests
+ * 
+ * Run tests 
+ * ctest --test-dir build --output-on-failure
+ */
+
 namespace {
 
 using paging::FIFO;
