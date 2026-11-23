@@ -3,22 +3,20 @@
 
 #include "stddef.h"
 
-namespace dll_api {
 
-    #ifndef __cplusplus
-        typedef struct SimulationInput SimulationInput;
-    #endif
+#ifndef __cplusplus
+    typedef struct SimulationInput SimulationInput;
+#endif
 
-    struct SimulationInput{
+struct SimulationInput{
 
-        const int* initialPages;
-        unsigned int initialPagesNumber;
+    const int* m_initialPages;
+    unsigned int m_initialPagesNumber;
 
-        const int* queryLine;
-        unsigned int queryLineLength;
+    const int* m_queryLine;
+    unsigned int m_queryLineLength;
 
-        unsigned int memoryFrames;
-    };
+    unsigned int m_memoryFrames;
+};
 
-    #endif
-}
+#endif

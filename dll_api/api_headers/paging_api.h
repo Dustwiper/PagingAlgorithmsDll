@@ -5,23 +5,21 @@
 #include "simulation_output.h"
 #include "paging_export.h"
 
-namespace dll_api{
     /* Совместимость для компиляторов С++ и С */
 
-    #ifdef __cplusplus
-        extern"C"{
-    #endif
+#ifdef __cplusplus
+    extern"C"{
+#endif
 
-    PAGING_API int runFifo(const SimulationInput* inputData, SimulationOutput** result);
+PAGING_API int runFifo(const SimulationInput* inputData, SimulationOutput** result);
 
-    PAGING_API int runLRU(const SimulationInput* inputData, SimulationOutput** result);
+PAGING_API int runLRU(const SimulationInput* inputData, SimulationOutput** result);
 
-    PAGING_API void freeSimulationOutput(SimulationOutput* result);
+PAGING_API void freeSimulationOutput(SimulationOutput* result);
 
-    #ifdef __cplusplus
-        }
-    #endif
 
-    #endif
+#ifdef __cplusplus
+    }
+#endif
 
-}
+#endif
