@@ -15,12 +15,14 @@ add_library(PagingCore
         source/paging_algorithm.cpp
         source/FIFO.cpp
         source/LRU.cpp
+        dll_api/api_source
 )
 
 # Подключение заголовочных файлов
 target_include_directories(PagingCore
     PUBLIC
         ${CMAKE_SOURCE_DIR}/headers
+        ${CMAKE_SOURCE_DIR}/dll_api/api_headers
 )
 
 # Дополнительные настройки и флаги компиляции
@@ -57,12 +59,12 @@ set_target_properties(Paging_Algorithm_lib
 ### Консольное приложение ###
 
 # Создание цели для консольного приложения
-add_executable(Paging_Algorithm_DLL
+add_executable(Paging_Algorithm_Konsole
     source/main.cpp
     source/output_handler.cpp
 )
 
-target_link_libraries(Paging_Algorithm_DLL
+target_link_libraries(Paging_Algorithm_Konsole
     PRIVATE
         PagingCore
 )
