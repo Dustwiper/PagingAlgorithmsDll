@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <memory>
 #include "paging_algorithm.hpp"
 #include "simulation_data.hpp"
 

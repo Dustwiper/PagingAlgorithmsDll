@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <iterator>
 
 #include "simulation_data.hpp"
 #include "FIFO.hpp"
 #include "LRU.hpp"
 #include "output_handler.hpp"
 #include "initialization_error.hpp"
+#include "paging_api.h"
 
 int main(){
     
