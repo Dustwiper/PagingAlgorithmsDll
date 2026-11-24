@@ -14,13 +14,13 @@ namespace {
 
     // Проверка нулевых указателей и пустых полей, переданных от клиента
     PagingStatus validateInput(const SimulationInput* inputData){
-
-        if (inputData->m_initialPagesNumber > inputData->m_memoryFrames){
-            throw PAGING_MEMORY_LIMIT_EXCEEDED;
-        }
     
         if (inputData == nullptr){
             return PAGING_NULL_POINTER;
+        }
+
+        if (inputData->m_initialPagesNumber > inputData->m_memoryFrames){
+            return PAGING_EXCEEDED_MEMORY;
         }
 
         if (inputData->m_initialPagesNumber > 0){
@@ -186,6 +186,6 @@ PAGING_API int runFifo(const SimulationInput* inputData, SimulationOutput** resu
 
     *result = convertOutput(history);
 
-    return 0;
+    return PAGING_SUCCESS;
 }
 
