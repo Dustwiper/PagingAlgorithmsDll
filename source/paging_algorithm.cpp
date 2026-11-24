@@ -22,19 +22,7 @@ namespace {
 namespace paging{
 
     std::vector<SimulationResult> PagingAlgorithm::runSimulation(const SimulationData& inputData) const {
-        try{
-            validateData(inputData);
-        } catch (const ExceededMemoryError& e){
-            std::cerr << e.what() << std::endl;
-            exit(1);
-        }catch (const ZeroMemorySlotsError& e){
-            std::cerr << e.what() << std::endl;
-            exit(1);
-        }catch (const DuplicatesError& e){
-            std::cerr << e.what() << std::endl;
-            exit(1);
-        }
-        
+        validateData(inputData);
         return executeAlgorithm(inputData);
     }
 
