@@ -13,46 +13,49 @@
 namespace {
 
     // Проверка нулевых указателей и пустых полей, переданных от клиента
-    int validateInput(const SimulationInput* inputData){
+    PagingStatus validateInput(const SimulationInput* inputData){
+
+        if (inputData->m_initialPagesNumber > inputData->m_memoryFrames){
+            throw PAGING_MEMORY_LIMIT_EXCEEDED;
+        }
     
         if (inputData == nullptr){
-            return 1;
+            return PAGING_NULL_POINTER;
         }
 
         if (inputData->m_initialPagesNumber > 0){
 
             if (inputData->m_initialPages == nullptr){
-                return 1;
+                return PAGING_NULL_POINTER;
             }
         }
 
         if (inputData->m_memoryFrames == 0) {
-            return 1;
+            return PAGING_ZERO_MEMORY_FRAMES;
         }
 
 
         if(inputData->m_memoryFrames > paging::limits::MAX_MEMORY_FRAMES){
-            return 1;
+            return PAGING_MEMORY_LIMIT_EXCEEDED;
         }
 
         if(inputData->m_queryLineLength > paging::limits::MAX_QUERY_LENGTH){
-            return 1;
+            return PAGING_QUERY_LIMIT_EXCEEDED;
         }
 
         if(inputData->m_queryLineLength > 0){
 
             if(inputData->m_queryLine == nullptr){
-                return 1;
+                return PAGING_NULL_POINTER;
             }
         }   
 
-        return 0;
+        return PAGING_SUCCESS;
     } 
 
     /* Преобразование входных данных из С-структуры в структуру С++. 
         ! Вызывать только после выполенния validateInpt.
     */
-
     paging::SimulationData convertData(const SimulationInput& inputData){
 
     paging::SimulationData initialData;
@@ -164,13 +167,15 @@ PAGING_API void freeSimulationOutput(SimulationOutput* result){
 /* Вызов функции для алгоритма fifo из ядра библиотеки и обработка результата*/
 PAGING_API int runFifo(const SimulationInput* inputData, SimulationOutput** result){
     if(result == nullptr){
-        return 1;
+        return PAGING_NULL_POINTER;
     }
 
     *result = nullptr;
 
-    if (validateInput(inputData) != 0){
-        return 1;
+
+    PagingStatus status = validateInput(inputData);
+   if (status != PAGING_SUCCESS){
+        return status;
     }
 
     paging::SimulationData data = convertData(*inputData);
